@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+font-family: 'Roboto', sans-serif;
+line-height: 1.4;
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin:0.75rem 0;
+}
+/* Utility Classes*/
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+
+}
+
+.text-center {
+    text-align: center;
+}
+.text-primary {
+    color: #93cb52;
+}
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+.bg-primary {
+    background: #93cb52;
+    color:white;
+}
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+
+}
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-family: cursive;
+}
+.py-1{
+    padding: 1.5rem 0;
+}
+.py-2{
+    padding: 2rem 0;
+}
+.py-3{
+    padding: 3rem 0;
+}
+.p-1{
+    padding: 1.5rem ;
+}
+.p-2{
+    padding: 2rem ;
+}
+.p-3{
+    padding: 3rem ;
+}
+.btn, .btn2 {
+    display: inline-block;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px; 
+}
+.btn:hover , .btn2:hover{
+    background: #b326eb;
+    color: #000000
+}
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.btn2-dark {
+    background:#333;
+    width: 100%;
+    border-radius: 5px;
+  
+}
+.btn2 a {
+    color:#fff;
+}
+
+
+.list {
+    margin: 0.5rem 0;
+    list-style: none;
+}
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+}
+
+/* Navbar*/
+#navbar {
+    display: flex;
+    background: #333;
+    position: sticky; 
+    color: #fff;
+    top:0;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+}
+#navbar ul {
+    display: flex;
+    align-items:center;
+    list-style: none;
+}
+#navbar ul li a {
+    color:#fff; 
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+#navbar ul li a:hover {
+    background: #93cb52;
+    border-radius: 5px;
+}
+/* Showcase */
+#showcase {
+    background: #333 url(showcase\ pic2.jpeg) no-repeat center center/cover;
+    height: 100vh;
+    color:#fff;
+}
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
+    padding: 0 2rem;
+    /* overlay */
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Section: services we Do */
+#services .items {
+    display:flex;
+    padding: 1rem;
+}
+#services .items .item{
+    flex:1;
+    text-align:center;
+    padding: 1rem;
+}
+#services .items .item i {
+      background: #93cb52;
+      padding: 1rem;
+      border-radius: 50%; 
+      margin-bottom: 1rem;
+}
+
+/* Section: about Who We Are */
+#about {
+    display: flex;
+}
+#about div {
+    flex: 1;
+}
+#about span{
+    margin-bottom: 1.5rem;
+}
+
+#about .about-img {
+    background: #333 url(Owners.jpg) no-repeat center center/cover;
+}
+
+/* portfolio */
+#services .items .item i {
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%; 
+    margin-bottom: 1rem;
+}
+#portfolio .items {
+    display:flex;
+}
+#portfolio .items i 
+{ 
+    background: #7250cf;
+    padding: 1rem;
+    border-radius: 50%; 
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+#portfolio .items {
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: cursive;
+    margin-bottom: 0.5rem;
+}
+#portfolio .items img{
+    display:block;
+    margin: auto; 
+    width:60%;
+    border-radius: 5px;
+}
+#portfolio .items div:last-child {
+    display:none; 
+}
+#portfolio-btn {
+    text-align: center;
+    margin-top: .2rem;
+}
+#portfolio {
+    background: url(portfolio\ pic3.jpg) no-repeat center center/cover;
+}
+/* Contact */
+#contact {
+    display:flex;
+
+}
+#contact .map, #contact .contact-form {
+    flex: 1;
+}
+#contact .contact-form .form-group {
+    margin: 0.75rem; 
+}
+#contact .contact-form label {
+    display: block;
+}
+#contact .contact-form input, #contact .contact-from textarea{
+    width:100%;
+    padding: 0.5rem;
+}
+
+/* Success Page  */
+#success {
+    height: 100vh;
+    text-align: center;
+}
+
+#success .container {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    height: 100%; 
+    padding: 0 2rem;
+    /* overlay */
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right:0;
+    bottom:0;
+}

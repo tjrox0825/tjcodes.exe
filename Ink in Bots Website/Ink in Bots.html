@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" text="Ink in Bots | Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="content writing, web development, project management">
+        <!-- Java script to import Icons online-->
+        <script src="https://kit.fontawesome.com/c21d4d3179.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="Ink in Bots styling.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="Ink In Bots Mobile.css">
+        <link rel="stylesheet" media="screen and (min-width:1100px" href="Ink in Bots Widescreen.css">
+        <title>
+            Ink in Bots Website | Content Writing & Web Development
+        </title>
+    </head>
+    <body id="home">
+        <!--NAVBAR-->
+        <nav id="navbar">
+            <h1 class="logo">
+                <span class="text-primary"> <i class="fas fa-robot"></i> Ink</span>inBots
+            </h1>
+            <ul> 
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+               <!-- <li><a href="#portfolio">Portfolio</a></li>-->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!--Header: Showcase-->
+        <header id="showcase">
+            <div class="showcase-content">
+                <h1 class="l-heading">
+                    One Step Solution 
+                </h1>
+                <h2>
+                    <p class="lead">
+                    | Web Development - Content Writing - Project Management |
+                    </p>
+                </h2>
+                <a class="btn" href="#services">Read More</a>
+            </div>
+        </header>
+        <!-- Services Section -->
+        <section id="services" class="bg-light py-1">
+            <div class="container">
+                <h2 class="m-heading text-center">
+                    The <span class="text-primary">Services</span> We Provide
+                </h2>
+                <div class="items">
+                    <div class="item">
+                     <i class="fas fa-laptop fa-2x"></i>
+                        <div>
+                            <h3> Web Development </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus?</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-book-reader fa-2x"></i>
+                        <div>
+                            <h3> Project Management</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus?</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-pencil-alt fa-2x"></i>
+                        <div>
+                            <h3> Content Writing</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--about We Are-->
+        <section id="about">
+            <div class="about-img"></div>
+            <div class="about-text bg-dark p-2">
+                <h2 class="m-heading">About<br><span class="text-primary">Who</span>  We Are </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis amet, eius adipisci velit eligendi numquam dolores facilis consectetur atque consequatur id labore non provident natus sunt cupiditate, porro sint nam.
+                </p>
+                <h3> Our Team</h3>
+                <ul class="list">
+                    <li>Jay Verma: CEO | Content Writing</li>
+                    <li>Tarun Tanmay: HR | Senior Editor</li>
+                    <li>Rishab Arora: Head | Web Development</li>
+                    <li> Shubham Chaudhary: CMO | Project Management </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Section: Portfolio-->
+       <section id="portfolio" class="py-1">
+           <div class="container">
+               <h2 class="m-heading text-center">
+                   <span class="text-primary">Our</span>
+                   Portfolio
+               </h2>
+               <div class="items py-1">
+                   <div>
+                    <i class="fas fa-laptop fa-2x"></i> <img src="web development.jpeg" alt="Client1"><h6>Web Development</h6>
+                   </div>
+                   <div>
+                    <i class="fas fa-book-reader fa-2x"></i> <img src="project management2.jpeg" alt="Client2"> <h6>Project Management</h6>
+                    </div>
+                     <div>
+                        <i class="fas fa-pencil-alt fa-2x"></i> <img src="content writing.jpeg" alt="Client3"> <h6>Content Writing</h6>
+                    </div>
+                    <div>
+                        <!-- This is the last child whose display is set to none in css-->
+                     <img src="client4.jpeg" alt="Client4">
+                    </div>
+                   <!--<div>
+                        <img src="client4.jpeg" alt="Client5">
+                       </div>
+               </div>-->
+           </div>
+           <div id="portfolio-btn" >
+            <a class=btn showcase href="Ink in Bots Portfolio.html" target="_blank">
+                Click Here for Portfolio Page
+            </a>
+           </div>
+       </section>
+             <!--SECTION: CONTACT-->
+                <section id="contact">
+                    <div class="contact-form bg-primary p-2">
+                        <h2 class="m-heading">Contact Us</h2>
+                        <p>
+                            Please use the form below to contact us 
+                        </p>
+                        <!--Form Submission--> 
+                        <!-- in the form, change submitted.html with the php file and put method="post"-->
+                        <form action="submitted.html">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="emai" placeholder="Enter your email">
+                                </div>
+                                <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                    <input type="number" name="phone" id="phone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                <label for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+                                </div>
+                                <button class="btn2 btn2-dark" name="button">Submit
+                                    
+                                </button>
+                                <!--SID Solution 
+                                <input type="submit" value="Send" class="btn2 btn-dark"> 
+                                -->
+                                <!--<a href="submitted.html">Submit</a>-->
+                                
+                        </form>
+                    </div>
+                    <div  class="map"></div>
+                </section>
+                <!-- Footer  -->
+                <footer id="main-footer" class="bg-dark text-center py-1">
+                    <div class="container">
+                        <p>Copyright &copy; 2020, InkinBots,<br>All Rights Reserved</p>
+                    </div>
+                </footer>
+                    <!-- Jquery CDN-->
+                    <script 
+                        src="https://code.jquery.com/jquery-3.5.0.min.js" 
+                        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 
+                        crossorigin="anonymous">
+                    </script>
+                    <!-- Local Javascript File-->
+                    <script src="Ink in Bots Website.js"></script>
+                    <!--Google Maps-->
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBorYQfzr9msYlglbAOXCFV2Y7EqGlMSa8&callback=initMap"
+                        async defer>
+                    </script>
+          
+    </body>
+</html>
