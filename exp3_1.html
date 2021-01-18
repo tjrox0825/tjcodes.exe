@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0" />
+    <meta name="description" text="Timetable" />
+    <meta http-equiv="X-UA_Compatible" content="ie-edge" />
+    <meta name=" keywords " content="Timetable, Semester, Marks " />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <title>Semester Marks Table</title>
+    <!-- Link Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+
+  <body>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid grey;
+        padding: 5px;
+      }
+    </style>
+    <h1>Semester Marks Timetable</h1>
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <table>
+        <th> Sr. No</th>
+        <th> Name </th>
+        <th> Subject </th>
+        <th> Marks </th>
+        <tr ng-repeat="s in details | orderBy: 'Name' ">
+            <td> {{$index+1}}</td>
+            <td> {{s.Name | uppercase}}</td>
+            <td> {{s.Subject}}</td>
+            <td> {{s.marks}}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Controller Script-->
+    <script>
+      var app=angular.module('myApp',[]);
+      app.controller('myCtrl',function($scope)
+      {
+        $scope.details=
+        [
+          {Name:"Eminem", Subject:"Advanced Web Programming", marks:100},
+          {Name:"Slim Shady", Subject:"Artificial Intelligence", marks:100},
+          {Name:"White Rabbit", Subject:"Unix Programming", marks:100},
+          {Name:"Marshall Mathers", Subject:"Software Engineering", marks:100},
+        ]
+      }
+      );
+    </script>
+  </body>
+</html>

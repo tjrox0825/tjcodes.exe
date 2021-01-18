@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="device-width, initial-sclae=1.0">
+        <meta name="description" text="Navbar">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <meta name="keywords" content="navbar">
+    
+        <title>
+            Navbar 
+        </title>
+        <!-- Linking Angular-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <nav>
+            <a href="#" ng-repeat="n in nav" ng-style="style" 
+                ng-mouseover="style={'border-bottom':'5px solid red', 'background-color':'pink', 'cursor':'pointer'}" 
+                ng-click="func(n)" ng-mouseleave="">{{n}} 
+            </a>
+            <p> 
+                You chose <b> {{data}}</b></p>
+            </p>
+        </nav>  
+        <!-- Controller Script-->
+        <script>
+            var app= angular.module('myApp', []);
+            app.controller=('myCtrl', ['$scope', function($scope)
+            {   
+                var nav=
+                [
+                    {data: "'Home', 'About', 'Contact', 'Services'"},
+                ]
+
+                $scope.nav=nav;
+
+                $scope.ng-click()=function(n)
+                {
+                    n.data;
+                }
+
+            }]);
+        </script>
+    </body>
+</html>

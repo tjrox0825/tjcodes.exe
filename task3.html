@@ -1,0 +1,57 @@
+<!-- Services Experiment -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <meta name="description" text="Services">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <meta name="keywords" content="Web Development, Design, Integration, Training">
+        <!-- Link CSS -->
+        <link href="task3.css" rel="stylesheet">
+         <!-- Including Angular Java Script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <title>
+        Services
+        </title>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <header id="Services">
+                <div>
+                    <h1 class="l-heading">
+                        Our Services
+                    </h1>
+                </div>
+            </header>
+                <section id="section">
+                <div ng-repeat="c in content">
+                    
+                    <p class="name">{{c.name}} <span class="priced"><br> Rs. {{c.priced}} </span> </p>
+                <div>
+                </section>
+                <div>
+                <button class="btn" ng-click="price()"> Total= Rs. {{total}}</button>
+            </div>
+        </div>
+        <!-- Controller Script -->
+        <script>
+            var app=angular.module('myApp', []);
+            app.controller('myCtrl', function($scope)
+            {
+                var content = 
+                [
+                    {name:'Web Development', priced:'300'},
+                    {name:'Design', priced:'400'},
+                    {name:'Integration',priced:'250'},
+                    {name:'Training', priced:'220'},
+                ];
+                $scope.content=content;
+                $scope.price=function()
+                {
+                    $scope.total= ((parseInt($scope.web || 0)*300) +(parseInt($scope.des || 0)*400)+(parseInt($scope.int || 0)*250)+(parseInt($scope.tra || 0)*220))
+                }
+            });
+        </script>
+    </body>
+</html>

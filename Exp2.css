@@ -1,0 +1,19 @@
+body {
+     color: black;
+     text-align: center;
+     margin-top: 40vh;
+     background: #333333;
+}
+.text{
+    height: 2rem;
+    padding: 0 1rem ;
+    line-height: 2.5rem;
+}
+.btn {
+    height: 2rem;
+    padding: 0 1rem;
+}
+.list {
+
+    line-height: 1.5rem;
+}

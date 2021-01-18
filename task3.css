@@ -1,0 +1,50 @@
+body {
+    color: white;
+    background-color:#1b1b1b;
+    zoom: 0.5;
+     
+}
+
+.l-heading {
+    margin-top: 7rem;
+    font-style: italic;
+    font-size: 7rem;
+    text-align: center;
+}
+
+.name{
+    font-size: 4rem;
+    
+} 
+
+.btn {
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.2rem;
+    margin-left: 1.2rem;
+}
+
+.priced {
+    font-size: 2.5rem;
+    padding: 1rem 1rem;
+}
+
+#section {
+    background-color: #333;
+    padding: 2rem 2rem;
+    text-align: center;
+    zoom: 1.05;
+    border-radius: 5rem;
+    margin-left: 60rem;
+    margin-right: 60rem;
+    margin-top: 5rem;
+}
+
+
+.btn {
+    margin-left: 32rem;
+    margin-top: 1rem;
+    line-height: 2rem;
+    column-span: 2rem;
+    zoom: 2.5;
+}

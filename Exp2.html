@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Reminders </title>
+        <!-- Including Angular JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" href="Exp2.css">
+    </head>
+    <body> 
+        <div ng-app="myapp" ng-controller="remindercont">
+            <!-- Creating Reminder Form-->
+            <form name="reminderform" ng-submit="additem()">
+                <input class="text" type="text" name="reminder" ng-model="reminder" required/>
+                <br>
+                <br>
+                <button class="btn" ng-disabled="reminderform.$invalid">Set Reminder</button>
+                <br>
+                <button class="btn" ng-click="clearitem()"> Clear Reminder </button>
+            </form>
+                
+            <ul class="list">
+                <li ng-repeat="i in items"/>
+                    <input type="checkbox" ng-model="i.done">
+                    <span> {{i.title}}</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Controller Program-->
+        <script>
+            var app=angular.module("myapp",[]);
+            app.controller('remindercont', function($scope)
+            {
+                $scope.items = [{'title': 'Add New Reminder','done':false}];
+                $scope.additem=function()
+                {
+                    $scope.items.push({'title':$scope.reminder,'done':false});
+                    $scope.reminder='';
+                }
+                
+                $scope.clearitem=function()
+                {
+                    $scope.items=$scope.items.filter(function(i)
+                    {
+                        return !i.done;
+                    })
+                }      
+            });
+        </script>
+    </body>
+</html>

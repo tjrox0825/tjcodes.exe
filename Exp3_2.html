@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" text="validation form">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="form, validation, angularJS">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>
+        Form Validation
+        </title>
+        <!-- Link CSS-->
+        <link rel="stylesheet" href="Exp3_2.css">
+        <!-- Link Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style>
+            input.ng-pristine {
+                background-color: yellow;
+            }
+            input.ng-touched.ng-invalid{
+                background-color: red;
+            }
+            input.ng-touched.ng-valid{
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <form name = "form" novalidate>
+                <!-- First Name-->
+                <label for ="FirstName">First Name</label>
+                <input type="text" name="FirstName" ng-model="FirstName" ng-required="true"/>
+                <span ng-show="form.FirstName.$touched && form.FirstName.$error.required">First Name is Required!</span> <br><br>
+                <!-- Last Name-->
+                <label for ="LastName">Last Name</label>
+                <input type="text" name="LastName" ng-minlength="3" ng-maxlength="10" ng-model="LastName"/>
+                <span ng-show="form.LastName.$touched && form.LastName.$error.minlength">Minimum 3 Characters</span>
+                <span ng-show="form.LastName.$touched && form.LastName.$error.maxlength">Maximum 10 Characters</span> <br><br>
+                <!-- Email-->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" ng-model = "email" ng-required = "true"/>
+                <span ng-show="form.email.$touched && form.email.$error.email">Please enter a valid email address. </span>
+                <span ng-show="form.email.$touched &&  form.email.$error.required">Please enter an email address. </span><br><br>
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" ng-model = "password" ng-pattern="?^[A-Z][a-z]{3,20}$/" ng-required = "true"/>
+                <span ng-if="form.password.$touched && form.password.$error.required"> Please give a password</span>
+                <span ng-show="form.password.$touched && form.password.$error.pattern">Wrong Password</span>
+                <!--Submit Button-->
+            </form>
+            <br><br><button> Submit! </button>
+            <!-- Controller Script-->
+            <script>
+                var app=angular.module('myApp',[]);
+                app.controller('myCtrl', function($scope)
+                {
+                }
+                );
+            </script>
+        </div>
+    </body>
+</html>

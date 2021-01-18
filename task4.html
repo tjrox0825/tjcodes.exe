@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" text="validation form">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="form, validation, angularJS">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>
+        Form Validation
+        </title>
+        <!-- Link CSS-->
+        <link rel="stylesheet" href="task4.css">
+        <!-- Link Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp">
+            <div ng-controller="myCtrl">
+                <form class="form" name="myForm">
+                    First Name <input class="input" type="text" ng-model="firstName"><br> 
+                    Last Name <input class="input" type="text" ng-model="lastName">
+                </form>
+                <div>
+                    You entered {{firstName}} {{lastName}}
+                </div>
+            </div>
+        </div>
+        <!-- Controller Script-->
+        <script>
+            angular.module("myApp",[])
+                .controller("myCtrl", function($scope)
+                {
+                    //$scope.myForm={}
+                    $scope.firstName="";
+                    $scope.lastName="";
+
+                }
+                );
+        </script>
+    </body>
+</html>
