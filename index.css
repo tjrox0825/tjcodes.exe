@@ -1,0 +1,15 @@
+body {
+  color: blue;
+  text-align: center;
+  text-decoration: dashed;
+}
+
+body img {
+  align-items: center;
+  align-self: auto;
+}
+
+.h3 {
+  color: blue;
+  text-align: center;
+}
