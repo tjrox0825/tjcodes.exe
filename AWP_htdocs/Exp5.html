@@ -1,0 +1,39 @@
+<!-- JSONp Runner-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" text="validation form">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="form, validation, angularJS">
+    <title>
+        HTML: Json Data
+    </title>
+</head>
+
+<body>
+    <h2> HTML Table for JSon Data </h2>
+    <p id="showcase"> </p>
+</body>
+
+<script>
+    //creating XMLHTTPRequest Object:
+    var oXHR = new XMLHttpRequest();
+
+    //Initiate Request
+    oXHR.onreadystatechange = reportStatus;
+
+    // Fetch Json Data
+    oXHR.open("GET", "http://localhost/AWP_htdocs/Exp5.json", true);
+    oXHR.send();
+
+    function reportStatus() {
+        if (oXHR.readyState == 4) {
+            //Checking if request was complete
+            document.getElementById('showcase').innerHTML = this.responseText;
+        }
+    }
+</script>
+
+</html>

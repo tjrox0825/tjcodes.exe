@@ -1,0 +1,71 @@
+<!-- Ajax Get and Post Task -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" text="Employee Database">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="form, Employee Database, ajax">
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="task10.css">
+    <title>
+        Employee Database
+    </title>
+
+</head>
+
+<body>
+    <!-- Employee Form -->
+    <form class="emp_form">
+        Name: <input type="text" id="emp_name"> <br>
+        Salary: <input type="text" id="emp_salary"> <br>
+        Email: <input type="email" id="emp_email"> <br>
+        <input type="button" id="emp_submit" value="Submit" onclick="insertNewEmployee();">
+    </form>
+    <p id="emp"> Employee Database: </p>
+
+    <!-- User defined controller-->
+    <script>
+
+        function addEmployees(name, salary, email) {
+
+            var xhttp = new XMLHttpRequest();
+
+            //ajax file path:
+            xhttp.open("GET", "http://localhost/AWP_htdocs/task10.php?request= " + name + " " + salary + " " + email, true);
+            xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myobj = (this.responseText);
+                    document.getElementById("emp").innerHTML += " " + myobj;
+                }
+            };
+            xhttp.send();
+        }
+
+        function insertNewEmployee() {
+            var name = document.getElementById('emp_name').value;
+            var salary = document.getElementById('emp_salary').value;
+            var email = document.getElementById('emp_email').value;
+
+            if (name != '' && salary != '' && email != '') {
+                var data = { name: name, salary: salary, email: email };
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "http://localhost/AWP_htdocs/task10.php", true);
+
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        addEmployees(name, salary, email);
+                    }
+                };
+
+                xhttp.setRequestHeader("Content-Type", "application/json");
+                xhttp.send(JSON.stringify(data));
+            }
+        }
+    </script>
+</body>
+
+</html>

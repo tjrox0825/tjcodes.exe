@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initia-scale=1.0">
+    <meta name="description" text="Reseller">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="keywords" content="Shopping Cart, Electronics, Laptop, Mobile, Tablet">
+
+    <!-- Including Angular Java Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Including CSS -->
+    <link rel="stylesheet" href="shoppingportal.css">
+    <!-- Linking Font Awesome Scripting -->
+    <script src="https://kit.fontawesome.com/c21d4d3179.js" crossorigin="anonymous"></script>
+    <!-- Set Fav Icon-->
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <!-- Title-->
+    <title> Mac365 | Reseller </title>
+</head>
+
+<body id="home">
+
+    <!-- Navbar -->
+    <div ng-app="Navigation" ng-controller="Controller">
+        <nav id="navbar">
+            <h1 class="logo">
+                <a href="#home"><i class="fa fa-apple" aria-hidden="true"></i>
+                    <nbsp> Mac365 | <span class="text-primary">Reseller</span>
+                </a>
+            </h1>
+            <a href="#" ng-repeat="n in nav" ng-click="Navigation(n)">{{n}}</a>
+
+            <p>You chose <b>{{options}}</b></p>
+        </nav>
+    </div>
+
+    <!-- Angular JS starts-->
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <!-- Showcase-->
+        <header id="showcase">
+            <div class="showcase-content">
+                <h1 class="l-heading">
+                    Mac365 | Reseller
+                </h1>
+
+                <!-- Angular JS start -->
+                <div ng-app="">
+                    <input id="quant" type="text" placeholder="Enter your Name" ng-model="name">
+                </div>
+                <h3><br>Hello! <br> {{name}}</h3>
+                <!-- Angular JS End-->
+                <h2>
+                    <p class="lead">
+                        Buy Apple Products at cheapest Price in India
+                    </p>
+                </h2>
+
+                <a class="btn" href="#products">Check Our Latest Products</a>
+
+            </div>
+        </header>
+
+        <!-- Products-->
+
+
+
+        <section id="products" class="py-1">
+            <div class="container">
+                <h1 class="p-heading text-center">
+                    <br>
+                    <span class="text-primary">Our</span> Products
+                </h1>
+                <br>
+                <div class="items py-1">
+                    <div id="laptop">
+                        <i class="fas fa-laptop fa-2x" aria-hidden="true"></i><img src="MacBook Pro.png"
+                            alt="MacBook Pro">
+                        <h3 class="py-4">Macbook Pro 2020 <br> <input id="quant" type="number" placeholder="Quantity"
+                                min="0" ng-model="lap_qty"></h3>
+
+                    </div>
+                    <div class="priced-1">
+                        <h3> Macbook Pro 2020 </h3>
+                        <p> Apple MacBook Pro 13-inch 2020 is a macOS laptop with a 13.30-inch display that has a
+                            resolution of 1600x2560 pixels. It is powered by a Core i5 processor and it comes with 8GB
+                            of RAM. The Apple MacBook Pro 13-inch 2020 packs 256GB
+                            of SSD storage. Graphics are powered by Intel Integrated Iris Plus Graphics 645. </p>
+                        <p> Priced: Rs 1,10,000
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-1">
+            <div class="container">
+                <div class="items py-1">
+                    <div id="mobile">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <i class="fa fa-mobile fa-3x" aria-hidden="true"></i><img src="iPhone 12 Pro.png"
+                            alt="iPhone 12 Pro">
+                        <h3 class="py-4">iPhone 12 Pro 2020 <br> <input id="quant" type="number" placeholder="Quantity"
+                                min="0" ng-model="mob_qty"></h3>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="priced-2">
+                        <h3> iPhone 12 Pro 2020 </h3>
+                        <p> iPhone 12 Pro jumps from 8- to 10‑bit HDR recording, capturing 700 million colours for much
+                            more lifelike video. Then it goes one better, recording in Dolby Vision — the format used by
+                            film studios. You can even edit Dolby Vision
+                            video and use AirPlay to see every last bit of the difference on the big screen. </p>
+                        <p> Priced: Rs 1,00,000 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-1">
+            <div class="container">
+                <div class="items py-1">
+
+                    <div id="tablet">
+                        <br> <br> <br>
+                        <i class="fa fa-tablet fa-2x" aria-hidden="true"></i><img src="iPad Pro.png" alt="iPad Pro">
+                        <h3 class="py-4">iPad Pro 2020 <br> <input id="quant" type="number" placeholder="Quantity"
+                                min='0' ng-model="tab_qty"></h3>
+                    </div>
+
+                    <div class="priced-3">
+                        <h3> iPad Pro 2020 </h3>
+                        <p> The fourth generation of iPad Pro was announced on March 18, 2020, with the same screen
+                            sizes of the previous generation. It offers a redesigned camera module, an A12Z processor,
+                            128 GB minimum storage, and support for the Magic
+                            Keyboard with a trackpad that is sold separately. </p>
+                        <p> Priced: Rs 80,000 </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart -->
+        <section id="products" class="py-1">
+            <div class="container" id="cart">
+                <br><br>
+                <h1 class="p-heading text-center">
+                    <span class="text-primary">Cart</span> Total
+
+                </h1>
+                <br>
+                <div class="items py-1">
+
+                    <img src="cart.png" alt="cart">
+                    <p class="priced-4"> Thankyou for Shopping With Us <br> {{name}} <br> Do Visit us again :) </p>
+
+                    <div class="priced-1">
+                        <!-- Angular JS stars-->
+                        <br>
+                        <button class="btn priced-1" ng-click="price()">Your Total Billing Amount </button> = <b>Rs {{
+                            +tot_price}}<b>
+                                <!-- Angular JS ends-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Controller Script -->
+
+    <script>
+        //NavBar Controller
+        var app = angular.module("Navigation", []);
+        app.controller('Controller', ['$scope', function ($scope) {
+
+            $scope.nav = ['Macbook Pro 12', 'iPhone 12 Pro', 'iPad Pro', 'Cart'];
+            $scope.Navigation = function (options) {
+                $scope.options = options;
+                console.log($scope.options);
+            }
+        }
+
+        ]);
+    </script>
+
+    <script>
+        //Shopping Cart Controller
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.price = function () {
+                $scope.tot_price = (((parseInt($scope.tab_qty || 0) * 80000) + ((parseInt($scope.lap_qty) || 0) * 110000) + ((parseInt($scope.mob_qty) || 0)) * 100000))
+            }
+        });
+    </script>
+
+
+    <!-- Controller Script ends-->
+
+    <!-- Footer-->
+
+    <footer id="main-footer" class="bg-dark text-center py-5">
+        <div class="container">
+            <p>Copyright &copy; 2020, Mac365 | Reseller ,<br>All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- Jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+        </script>
+    <!-- Local Javascript File-->
+    <script src="shoppingportal.js"></script>
+
+    </div>
+</body>
+
+</html>

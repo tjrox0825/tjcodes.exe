@@ -1,0 +1,57 @@
+<!-- Customised Services-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" text="validation form">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="form, validation, angularJS">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <!-- link CSS-->
+    <link rel="stylesheet" href="Exp4.css">
+    <!-- Linking Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>
+        Customised Services
+    </title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <h2> Customised Services </h2>
+    <div class="container">
+        <div>
+            Message is displayed after 3 seconds: {{msg}}
+        </div>
+        <div>
+            Interval displayed: {{counter}}
+        </div>
+    </div>
+    <button class="btn" ng-click="prompt()">
+        Display Prompt
+    </button>
+
+    <!-- controller Script -->
+    <script>
+        var sample = angular.module('myApp', []);
+        sample.controller('myCtrl', function ($scope, $timeout, $interval, $window) {
+            $scope.counter = 0;
+
+            $timeout(function () {
+                $scope.msg = "Hi Tarun!";
+            }, 3000);
+
+            $interval(function () {
+                $scope.counter = $scope.counter + 1;
+            }, 1000);
+
+            $scope.prompt = function () {
+                var name = $window.prompt('Enter your Name:');
+                $window.alert('Hello' + ' ' + name);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

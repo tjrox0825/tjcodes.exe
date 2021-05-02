@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <meta name="description" text="Reseller">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <meta name="keywords" content="Football, Champions League, Soccer">
+
+        <!-- Including Angular Java Script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <!-- Including CSS -->
+        <link rel="stylesheet" href="task1.css">
+        <!-- Linking Font Awesome Scripting -->
+        <script src="https://kit.fontawesome.com/c21d4d3179.js" crossorigin="anonymous"></script>
+        <!-- Set Fav Icon-->
+        <link rel="shortcut icon" type="image/png" href="favfoot.jpeg"/>
+        <!-- Title-->
+        <title> Madridista 365 </title>
+    </head>
+    <body id="home">
+
+        <!-- Navbar -->
+        <nav id="navbar">
+            <h1 class="logo">
+                <a href="#home"><i class="fas fa-futbol" aria-hidden="true"></i> <nbsp> Madridista | <span class="text-primary">365</span>  </a>
+            </h1>
+            <ul> 
+            <li><a href="#products">Cristiano Ronaldo</a></li>
+            <li><a href="#mobile">Luka Modric</a></li>
+            <li><a href="#tablet">Luis Figo</a></li>
+            <li><a href="#cart"> Ricardo Kaka</a></li>
+            </ul>
+        </nav>
+
+        <!-- Angular JS starts-->
+        <div ng-app="myApp" ng-controller="myCtrl">
+
+            <!-- Showcase-->
+            <header id="showcase">
+                <div class="showcase-content">
+                    <h1 class="l-heading">
+                    Madridista | 365
+                    </h1>
+                    <br> 
+                    <h2>
+                        <p class="lead">
+                           Welcome to the best football club in the world 
+                        </p>
+                    </h2>
+                    
+                    <a class="btn" class="ballon" href="#products"> Real Madrid</a>
+
+                </div>
+            </header>
+
+            <!-- Products-->
+
+            <section id="products" class="py-1">
+                <div class="container">
+                    <h1 class="p-heading text-center">
+                    <br>
+                        <span class="ballon">Ballon d'Or</span> Winners
+                        
+                    </h1> 
+                    <br>
+                    <div class="items py-1">
+                        <div id="laptop">
+                            <br>
+                            <img src="Cristiano.jpg" alt="Cristiano Ronaldo">
+                        </div>
+                        <div ng-repeat="player in player1">
+                            <div class="priced-1"> 
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><h3> {{player.name}} </h3>
+                                <p> Cristiano Ronaldo, in full Cristiano Ronaldo dos Santos Aveiro, (born February 5, 1985, Funchal, Madeira, Portugal), 
+                                Portuguese football (soccer) forward who was one of the greatest players of his generation.Cristiano Ronaldo is a professional soccer player who has set records while playing for the Manchester United,
+                                Real Madrid and Juventus clubs, as well as the Portuguese national team </p>
+                             
+                                <p class="py-4" class="thumb"> Likes = {{player.likes}} </p>
+                                <p class="py-4" class="thumb"> Dislikes= {{player.dislikes}} </p>
+                                <p> 
+                                 <input class="btn" type="button" value="Like" ng-click="incLike(player)"/>
+                                 <nbsp> <input class="btn" type="button" value="Dislike" ng-click="incdisLike(player)"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="products" class="py-1">
+                <div class="container">
+                    <div class="items py-1">
+                        <div id="mobile">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <img src="luka.jpg" alt="Luka Modric">
+                        </div> 
+                        <br>
+                            <br>
+                        <div class="priced-2"> 
+                            <div ng-repeat="player in player2">
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><h3> {{player.name}} </h3>
+                                <p> Luka Modric is a Croatian professional footballer who plays as a midfielder
+                                for Spanish club Real Madrid and captains the Croatia national team. He plays mainly as a central midfielder, 
+                                but can also play as an attacking midfielder or as a defensive midfielder, usually deployed as a deep-lying playmaker. 
+                                Modric's ability to link play so effectively, and be both shield and supply line, is borne out of his 
+                                immaculate technical ability. Modric has retained that vision and ability to pick passes between the 
+                                lines as he has moved positionally into a deeper area of the pitch</p>
+                           
+                                <p class="py-4" class="thumb"> Likes = {{player.likes}} </p>
+                                <p class="py-4" class="thumb"> Dislikes= {{player.dislikes}} </p>
+                                <p> 
+                                 <input class="btn" type="button" value="Like" ng-click="incLike(player)"/>
+                                 <nbsp> <input class="btn" type="button" value="Dislike" ng-click="incdisLike(player)"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products" class="py-1">
+                <div class="container">
+                    <div class="items py-1">
+
+                        <div id="tablet">
+                            <br> <br> <br>
+                            <img src="luis.jpg" alt="Luis Figo">
+                        </div> 
+
+                        <div class="priced-3"> 
+                            <div ng-repeat="player in player3">
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i> <h3> {{player.name}}</h3>
+                                <p> Luís Filipe Madeira Caeiro Figo OIH  (born 4 November 1972) is a Portuguese retired professional 
+                                footballer who played as a midfielder for Sporting CP, Barcelona,
+                                Real Madrid and Inter Milan before retiring on 31 May 2009. Renowned for his 
+                                creativity and ability to get past defenders as a winger, Figo is regarded as one 
+                                of the greatest players of his generation. 
+                                 His 106 assists are the second-most in La Liga history. He has also been involved with campaigns to promote better
+                                 health and owns a bar in Portugal.</p>
+                                
+                             
+                                <p class="py-4" class="thumb"> Likes = {{player.likes}} </p>
+                                <p class="py-4" class="thumb"> Dislikes= {{player.dislikes}} </p>
+                                <p> 
+                                 <input class="btn" type="button" value="Like" ng-click="incLike(player)"/>
+                                 <nbsp> <input class="btn" type="button" value="Dislike" ng-click="incdisLike(player)"/>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div>   
+            </section>
+
+            <section id="products" class="py-1">
+                <div class="container">
+                    <div class="items py-1">
+
+                        <div id="cart">
+                            <br> <br> <br>
+                            <img src="kaka.jpeg" alt="Ricardo Kaka">
+                        </div> 
+
+                        <div class="priced-3">
+                            <div ng-repeat="player in player4"> 
+                                <i class="fa fa-user fa-2x" aria-hidden="true"></i><h3> {{player.name}}</h3>
+                                <p>Kaká, byname of Ricardo Izecson dos Santos Leite, (born April 22, 1982, Brasília, 
+                                    Brazil), Brazilian football (soccer) player who was named the World Player of the Year by the Fédération 
+                                    Internationale de Football Association (FIFA) in 2007. Kaká was the first 
+                                    sportsperson to amass 10 million followers on Twitter.
+                                </p>
+                            
+                                <p class="py-4" class="thumb"> Likes = {{player.likes}} </p>
+                                <p class="py-4" class="thumb"> Dislikes= {{player.dislikes}} </p>
+                                <p> 
+                                 <input class="btn" type="button" value="Like" ng-click="incLike(player)"/>
+                                 <nbsp> <input class="btn" type="button" value="Dislike" ng-click="incdisLike(player)"/>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>  
+                </div>   
+            </section>
+        
+            <!-- Cart -->
+          <!-- <section id="products" class="py-1"> 
+                    <div class="container" id="cart">
+                        <br><br>
+                        <h1 class="p-heading text-center">
+                        <span class="text-primary">Cart</span>
+                            Total
+                                    
+                        </h1> 
+                            <br>
+                            <div class="items py-1">
+                            </div>
+                    </div>
+                </section> -->
+
+        </div>
+
+        <!-- Controller Script -->    
+                <script>
+                    var app = angular.module('myApp',[]);
+                    app.controller('myCtrl', function ($scope)
+                    {
+                         var player1 = 
+                        [
+                            {name:'Cristiano Ronaldo',likes:0,dislikes:0},
+                            
+                        ];
+
+                        var player2=
+                        [
+                            {name:'Luka Modric',likes:0, dislikes:0},
+                        ];
+
+                        var player3=
+                        [
+                            {name:'Luis Figo',likes:0, dislikes:0},
+                        ];
+
+                        var player4=
+                        [
+                            {name:'Ricardo Kaka',likes:0, dislikes:0},
+                        ];
+
+                        $scope.player1=player1;
+                        $scope.player2=player2;
+                        $scope.player3=player3;
+                        $scope.player4=player4;
+
+                        $scope.incLike=function(player)
+                        {
+                            player.likes++; 
+                        }
+
+                        $scope.incdisLike=function(player)
+                        {
+                            player.dislikes++; 
+                        }
+                    });
+               </script>
+        <!-- Controller Script ends-->
+
+        <!-- Footer-->
+
+            <footer id="main-footer" class="bg-dark text-center py-5">
+                <div class="container">
+                  <p class="footer">Copyright &copy; 2020, Madridista | 365,<br>All Rights Reserved</p> 
+                </div>
+            </footer>
+
+                    <!-- Jquery CDN-->
+                    <script  src="https://code.jquery.com/jquery-3.5.0.min.js" 
+                        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="  crossorigin="anonymous">
+                    </script>
+        
+        
+                    <script src="task1.js">
+                     </script> 
+
+    </body>
+</html>
